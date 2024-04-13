@@ -1,0 +1,106 @@
+* {
+    font-family: "DM Sans", sans-serif;
+}
+body {
+    margin: 0;
+    padding: 40px;
+    background-color: #f6f5f5;
+}
+h1 {
+    color: #484848;
+    background-color: #f0f0f3;
+    border-radius: 10px;
+    box-shadow:inset -10px -10px 10px rgba(255, 255, 255, .7),inset 10px 10px 10px rgba(174, 174, 192, 0.2);
+    padding: 20px;
+}
+#book-form {
+    margin-top: 20px;
+}
+#add-book-form > * {
+    margin: 5px 5px;
+}
+.hidden {
+    display: none;
+}
+#book-list {
+    background-color: #f0f0f3;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: -10px -10px 30px #ffffff, 10px 10px 30px rgba(174, 174, 192, 0.4);
+}
+.book-card {
+    background-color: #f0f0f3;
+    color: #484848;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: -10px -10px 30px #ffffff, 10px 10px 30px rgba(174, 174, 192, 0.4),
+    inset -10px -10px 10px rgba(174, 174, 192, 0.25),
+    inset 10px 10px 10px #ffffff;
+}
+
+.book-card button {
+    float: right;
+}
+
+button {
+    background-color: rgb(12, 53, 158);
+    color: #f6f5f5;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 3px 3px 3px rgba(12, 53, 158, 0.3);
+}
+button:hover {
+    background-color: #3e67ce;
+}
+#remove-btn {
+    align-self: right;
+}
+/* ... */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 1rem;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #3e67ce;
+}
+
+.toggle-label:before {
+    position: absolute;
+    content: "";
+    height: 0.8rem;
+    width: 0.8rem;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggle-checkbox:checked + .toggle-label:before {
+    transform: translateX(0.9rem);
+}
